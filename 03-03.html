@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 폼</title>
+</head>
+
+<body>
+    <h2>회원가입</h2>
+    <form>
+        <!-- 사용자에게 보이는 입력 필드들 -->
+        <p>
+            <label for="email">이메일:</label><br>
+            <input type="email" id="email" name="email" required>
+        </p>
+        <p>
+            <label for="newPassword">비밀번호:</label><br>
+            <input type="password" id="newPassword" name="password" minlength="8" required>
+        </p>
+        <p>
+            <label for="confirmPassword">비밀번호 확인:</label><br>
+            <input type="password" id="confirmPassword" name="confirmPassword" minlength="8" required>
+        </p>
+
+        <!-- 숨겨진 정보들 (사용자에게는 보이지 않음) -->
+        <input type="hidden" name="signup_source" value="main_page">
+        <input type="hidden" name="referrer" value="google_ads">
+        <input type="hidden" name="form_version" value="2.1">
+
+        <button type="submit">회원가입</button>
+    </form>
+
+    <script>
+        // 폼이 전송될 때 숨겨진 값들도 함께 전송되는지 확인
+        document.querySelector('form').addEventListener('submit', function (e) {
+            e.preventDefault(); // 실제 전송은 막고 콘솔에서 확인
+
+            const formData = new FormData(this);
+            console.log('전송될 데이터:');
+            for (let [key, value] of formData.entries()) {
+                if (key.includes('password')) {
+                    console.log(key + ': ' + '●'.repeat(value.length));
+                } else {
+                    console.log(key + ': ' + value);
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

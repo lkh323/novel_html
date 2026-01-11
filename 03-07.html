@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실무형 회원가입 폼</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .signup-form {
+            max-width: 500px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-title {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .form-row {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #555;
+        }
+
+        .required::after {
+            content: " *";
+            color: #e74c3c;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .checkbox-container input[type="checkbox"] {
+            width: auto;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+
+<body>
+    <form class="signup-form">
+        <h2 class="form-title">회원가입</h2>
+
+        <div class="form-row">
+            <label for="fullname" class="form-label required">이름</label>
+            <input type="text" id="fullname" name="fullname" class="form-input" required>
+        </div>
+
+        <div class="form-row">
+            <label for="email" class="form-label required">이메일</label>
+            <input type="email" id="email" name="email" class="form-input" required>
+        </div>
+
+        <div class="form-row">
+            <label for="password" class="form-label required">비밀번호</label>
+            <input type="password" id="password" name="password" class="form-input" required>
+        </div>
+
+        <div class="form-row">
+            <label for="phone" class="form-label">전화번호</label>
+            <input type="tel" id="phone" name="phone" class="form-input">
+        </div>
+
+        <div class="form-row">
+            <div class="checkbox-container">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">이용약관에 동의합니다</label>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="checkbox-container">
+                <input type="checkbox" id="marketing" name="marketing">
+                <label for="marketing">마케팅 정보 수신에 동의합니다</label>
+            </div>
+        </div>
+
+        <button type="submit" class="submit-btn">회원가입</button>
+    </form>
+</body>
+
+</html>

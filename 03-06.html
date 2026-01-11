@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>고객 문의</title>
+</head>
+
+<body>
+    <h2>고객 문의</h2>
+    <form>
+        <p>
+            <label>이름:</label><br>
+            <input type="text" name="name" required>
+        </p>
+
+        <p>
+            <label>문의 내용:</label><br>
+            <textarea name="inquiry" rows="5" cols="100" placeholder="문의하실 내용을 자세히 적어주세요"></textarea>
+        </p>
+
+        <button type="submit">문의하기</button>
+    </form>
+
+    <style>
+        textarea {
+            width: 100%;
+            max-width: 500px;
+            min-height: 100px;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+            resize: vertical;
+            /* 세로로만 크기 조절 가능 */
+        }
+
+        textarea:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+    </style>
+
+    <br><br><br>
+
+    <div>
+        <label>후기 작성 (최대 200자):</label><br>
+        <textarea id="review" maxlength="200" rows="4" cols="50"></textarea>
+        <div id="counter">0 / 200</div>
+    </div>
+
+    <script>
+        const textarea = document.getElementById('review');
+        const counter = document.getElementById('counter');
+
+        textarea.addEventListener('input', function () {
+            const currentLength = this.value.length;
+            const maxLength = this.getAttribute('maxlength');
+            counter.textContent = `${currentLength} / ${maxLength}`;
+
+            // 글자 수가 많아질수록 색상 변경
+            if (currentLength > maxLength * 0.8) {
+                counter.style.color = 'red';
+            } else {
+                counter.style.color = 'gray';
+            }
+        });
+    </script>
+
+
+
+</body>
+
+</html>

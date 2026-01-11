@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>블로그 포스트</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .article-header {
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+
+        .article-header h2 {
+            color: #2c3e50;
+            margin: 0 0 10px 0;
+        }
+
+        .article-meta {
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 페이지 전체 헤더 -->
+    <header class="page-header">
+        <h1>개발자 블로그</h1>
+        <p>코딩의 즐거움을 나누는 공간</p>
+    </header>
+
+    <main>
+        <!-- 첫 번째 글의 헤더 -->
+        <article>
+            <header class="article-header">
+                <h2>HTML5 시맨틱 태그 완전 정복</h2>
+                <div class="article-meta">
+                    작성일: 2024년 1월 15일 | 작성자: 김개발
+                </div>
+            </header>
+            <p>오늘은 HTML5의 시맨틱 태그에 대해 알아보겠습니다...</p>
+        </article>
+
+        <!-- 두 번째 글의 헤더 -->
+        <article>
+            <header class="article-header">
+                <h2>CSS Flexbox 마스터하기</h2>
+                <div class="article-meta">
+                    작성일: 2024년 1월 10일 | 작성자: 김개발
+                </div>
+            </header>
+            <p>Flexbox는 레이아웃을 만들 때 매우 유용한 도구입니다...</p>
+        </article>
+    </main>
+</body>
+
+</html>

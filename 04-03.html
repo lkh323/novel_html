@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스타일링된 내비게이션</title>
+    <style>
+        /* 헤더 스타일 */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+        }
+
+        /* 내비게이션 스타일 */
+        nav ul {
+            list-style: none;
+            /* 불릿 포인트 제거 */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            /* 가로로 배열 */
+        }
+
+        nav li {
+            margin-right: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+            /* 마우스 올렸을 때 금색 */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>김개발의 웹사이트</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">홈</a></li>
+                <li><a href="#about">소개</a></li>
+                <li><a href="#services">서비스</a></li>
+                <li><a href="#contact">연락처</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+
+</html>
