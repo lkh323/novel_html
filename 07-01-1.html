@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        /* 기존 방법: Float 사용 */
+        .old-container {
+            width: 100%;
+            background: #f0f0f0;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .old-box {
+            width: 30%;
+            height: 100px;
+            background: #ff6b6b;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+            float: left;
+            margin-right: 5%;
+        }
+
+        .old-box:last-child {
+            margin-right: 0;
+        }
+
+        /* clearfix - 복잡하죠? */
+        .old-container::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* 새로운 방법: Flexbox 사용 */
+        .new-container {
+            display: flex;
+            gap: 20px;
+            background: #f0f0f0;
+            padding: 20px;
+        }
+
+        .new-box {
+            flex: 1;
+            height: 100px;
+            background: #4ecdc4;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>기존 방법 (Float)</h2>
+    <div class="old-container">
+        <div class="old-box">박스 1</div>
+        <div class="old-box">박스 2</div>
+        <div class="old-box">박스 3</div>
+    </div>
+
+    <h2>새로운 방법 (Flexbox)</h2>
+    <div class="new-container">
+        <div class="new-box">박스 1</div>
+        <div class="new-box">박스 2</div>
+        <div class="new-box">박스 3</div>
+    </div>
+</body>
+
+</html>

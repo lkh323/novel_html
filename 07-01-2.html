@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: auto 1fr auto;
+            grid-template-areas:
+                "header header header"
+                "sidebar main aside"
+                "footer footer footer";
+            gap: 20px;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        .header {
+            grid-area: header;
+            background: #ff6b6b;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background: #4ecdc4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .main {
+            grid-area: main;
+            background: #45b7d1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .aside {
+            grid-area: aside;
+            background: #f9ca24;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .footer {
+            grid-area: footer;
+            background: #6c5ce7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="header">헤더</div>
+        <div class="sidebar">사이드바</div>
+        <div class="main">메인 콘텐츠</div>
+        <div class="aside">광고 영역</div>
+        <div class="footer">푸터</div>
+    </div>
+</body>
+
+</html>
