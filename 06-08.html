@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position 실습</title>
+    <style>
+        .container {
+            width: 400px;
+            height: 300px;
+            border: 2px solid #333;
+            margin: 50px;
+            position: relative;
+            /* 중요: absolute의 기준점 역할 */
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #3498db;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+            font-weight: bold;
+        }
+
+        /* Box 2를 relative로 이동 */
+        #box2 {
+            background-color: #e74c3c;
+            position: relative;
+            top: 20px;
+            /* 원래 위치에서 아래로 20px */
+            left: 50px;
+            /* 원래 위치에서 오른쪽으로 50px */
+        }
+
+        /* Box 3을 absolute로 정확한 위치에 배치 */
+        #box3 {
+            background-color: #2ecc71;
+            position: absolute;
+            top: 10px;
+            /* 부모(.container) 상단에서 10px */
+            right: 10px;
+            /* 부모(.container) 우측에서 10px */
+        }
+
+        /* 고정 버튼 만들기 */
+        .fixed-button {
+            position: fixed;
+            bottom: 20px;
+            /* 화면 하단에서 20px */
+            right: 20px;
+            /* 화면 우측에서 20px */
+            width: 60px;
+            height: 60px;
+            background-color: #9b59b6;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box" id="box1">Box 1</div>
+        <div class="box" id="box2">Box 2</div>
+        <div class="box" id="box3">Box 3</div>
+    </div>
+
+    <!-- body 태그 안에 추가 -->
+    <button class="fixed-button">↑</button>
+
+</body>
+
+</html>

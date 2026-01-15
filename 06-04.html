@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border 기초 실습</title>
+    <style>
+        .basic-border {
+            width: 200px;
+            height: 100px;
+            padding: 20px;
+            margin: 20px;
+            background-color: #f0f8ff;
+
+            /* 기본 테두리 */
+            border: 2px solid #333;
+        }
+
+        .separate-border {
+            width: 200px;
+            height: 100px;
+            padding: 20px;
+            margin: 20px;
+            background-color: #fff5ee;
+
+            /* 개별 속성으로 설정 */
+            border-width: 3px;
+            border-style: dashed;
+            border-color: #ff6b6b;
+        }
+
+        .dotted-border {
+            border: 4px dotted #4ecdc4;
+        }
+
+        .double-border {
+            border: 6px double #45b7d1;
+        }
+
+        .groove-border {
+            border: 8px groove #96ceb4;
+        }
+
+        .ridge-border {
+            border: 8px ridge #ffeaa7;
+        }
+
+        .card-style {
+            width: 300px;
+            padding: 20px;
+            margin: 20px;
+            background-color: white;
+
+            /* 아래쪽에만 테두리 */
+            border-bottom: 3px solid #e74c3c;
+
+            /* 그림자 효과 추가 */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar-style {
+            width: 200px;
+            height: 300px;
+            padding: 15px;
+            background-color: #f8f9fa;
+
+            /* 왼쪽에만 굵은 테두리 */
+            border-left: 5px solid #007bff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="basic-border">
+        기본 테두리 박스
+    </div>
+
+    <div class="separate-border">
+        점선 테두리 박스
+    </div>
+
+
+
+    <div class="dotted-border">
+        점선 테두리 박스 dotted
+    </div>
+
+
+    <div class="groove">
+        점선 테두리 박스 groove
+    </div>
+
+
+    <div class="ridge-border">
+        점선 테두리 박스 ride
+    </div>
+
+
+
+
+
+</body>
+
+</html>

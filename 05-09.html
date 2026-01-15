@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>상속 테스트</title>
+    <style>
+        .container {
+            color: blue;
+            font-size: 18px;
+            border: 2px solid red;
+            padding: 20px;
+        }
+
+        .child {
+            /* color와 font-size는 상속받음 */
+            /* border와 padding은 상속받지 않음 */
+        }
+
+        h1 {
+            color: blue !important;
+        }
+
+        #main-title {
+            color: red;
+            /* !important가 없으면 적용되지 않음 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        부모 요소입니다.
+        <p class="child">자식 요소입니다.</p>
+    </div>
+</body>
+
+</html>
